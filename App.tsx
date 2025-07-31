@@ -1,11 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const [count,setCount] = useState<number>(0);
+
+  const handlePress = () => {console.log("you clicked the button")};
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>COMPONENTSVERSION1</Text>
+      <Text>{count}</Text>
+      <Button 
+       title="CLICK HERE"
+       onPress={handlePress}
+      />
     </View>
   );
 }
